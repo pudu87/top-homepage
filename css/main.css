@@ -3,6 +3,99 @@
   font-weight: bold;
   src: url("norse.bold.otf") format("opentype");
 }
+body > * {
+  font-family: "Open Sans", sans-serif;
+}
 
+/* NAV */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 20px;
+  white-space: nowrap;
+  border-bottom: 1px solid #ddd;
+}
+
+nav > * {
+  display: flex;
+  align-items: center;
+}
+
+#logo img {
+  height: 60px;
+}
+#logo > a:last-child {
+  margin-left: 0.5em;
+  font-family: Norse, sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  color: #ce973e;
+}
+
+#menu {
+  margin-left: 1em;
+}
+#menu > a:first-child {
+  color: #6abfc3;
+  font-size: 30px;
+}
+#menu ul {
+  display: none;
+  margin-bottom: 0;
+}
+#menu li {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: rgba(74, 74, 74, 0.7);
+}
+#menu li > * {
+  padding: 0.5em;
+}
+#menu li:nth-child(2) a {
+  position: relative;
+}
+#menu li:nth-child(2) a::after {
+  display: inline-block;
+  border-top: 4px solid rgba(74, 74, 74, 0.7);
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  margin-left: 0.4em;
+  vertical-align: 0.3em;
+  content: "";
+}
+#menu li > a:hover,
+#menu li > a:hover:after {
+  color: #000;
+  border-top-color: #000;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 768px) {
+  nav {
+    justify-content: flex-start;
+    padding: 0 168px;
+  }
+
+  #menu > a:first-child {
+    display: none;
+  }
+  #menu ul {
+    display: flex;
+  }
+}
+@media (min-width: 1024px) {
+  nav {
+    justify-content: space-between;
+  }
+
+  #logo img {
+    height: 70px;
+  }
+  #logo > a:last-child {
+    font-size: 35px;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
