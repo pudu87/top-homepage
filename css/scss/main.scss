@@ -11,6 +11,23 @@ $grey:   rgba(74,74,74,0.7);
 body > * {
   font-family: 'Open Sans', sans-serif;
 }
+.btn {
+  margin-bottom: 60px;
+  display: inline-block;
+  padding: 1.8em 3.6em;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2em;
+  box-shadow: 0 0 .5em #aaa;
+}
+h2 {
+  font-weight: bold;
+}
+p {
+  font-size: 1.4em;
+  line-height: 1.8;
+  color: $grey;
+}
 
 /* NAV */
 
@@ -96,20 +113,11 @@ header {
   }
   p {
     margin-bottom: 60px;
-    font-size: 1.4em;
-    line-height: 1.8;
-    color: $grey;
   }
   .btn {
-    margin-bottom: 60px;
-    display: inline-block;
-    padding: 1.8em 3.6em;
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.2em;
+    @extend .btn;
     background-color: $teal;
     border-color: $teal;
-    box-shadow: 0 0 .5em #aaa;
   }
   .btn:hover {
     background-color: lighten($teal, 10%);
@@ -119,17 +127,36 @@ header {
   }
 }
 
-/*
-<header>
-  <h1>Your Career in Web Development Starts Here</h1>
+/* HOW */
 
-  <p>Our full stack curriculum is free and supported by a passionate open source community.</p>
-
-  <button>View Full Curriculum</button>
-
-  <div>hero</div>
-</header>
-*/
+#how {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  > * {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  h2 {
+    margin-bottom: 50px;
+  }
+  > p {
+    margin-bottom: 50px;
+  }
+  li {
+    padding-right: 70px;
+    padding-left: 70px;
+    img {
+      height: 120px;
+      margin-bottom: 30px;
+    }
+    h3 {
+      font-size: 1.4em;
+      font-weight: bold;
+    }
+  }
+}
 
 /* MEDIA QUERIES */
 
@@ -144,6 +171,21 @@ header {
     }
     ul {
       display: flex;
+    }
+  }
+  #how {
+    > p {
+      width: 600px;
+    }
+    ul {
+      max-width: 1110px;
+    }
+    li {
+      padding-right: 1em;
+      padding-left: 1em;
+      img {
+        height: 165px;
+      }
     }
   }
 }

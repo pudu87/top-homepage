@@ -7,6 +7,26 @@ body > * {
   font-family: "Open Sans", sans-serif;
 }
 
+.btn, header .btn {
+  margin-bottom: 60px;
+  display: inline-block;
+  padding: 1.8em 3.6em;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2em;
+  box-shadow: 0 0 0.5em #aaa;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.4em;
+  line-height: 1.8;
+  color: rgba(74, 74, 74, 0.7);
+}
+
 /* NAV */
 nav {
   position: fixed;
@@ -91,20 +111,10 @@ header h1 {
 }
 header p {
   margin-bottom: 60px;
-  font-size: 1.4em;
-  line-height: 1.8;
-  color: rgba(74, 74, 74, 0.7);
 }
 header .btn {
-  margin-bottom: 60px;
-  display: inline-block;
-  padding: 1.8em 3.6em;
-  color: #fff;
-  font-weight: bold;
-  font-size: 1.2em;
   background-color: #6abfc3;
   border-color: #6abfc3;
-  box-shadow: 0 0 0.5em #aaa;
 }
 header .btn:hover {
   background-color: #8ecfd2;
@@ -113,17 +123,36 @@ header img {
   width: 100%;
 }
 
-/*
-<header>
-  <h1>Your Career in Web Development Starts Here</h1>
+/* HOW */
+#how {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+#how > * {
+  margin-right: auto;
+  margin-left: auto;
+}
+#how h2 {
+  margin-bottom: 50px;
+}
+#how > p {
+  margin-bottom: 50px;
+}
+#how li {
+  padding-right: 70px;
+  padding-left: 70px;
+}
+#how li img {
+  height: 120px;
+  margin-bottom: 30px;
+}
+#how li h3 {
+  font-size: 1.4em;
+  font-weight: bold;
+}
 
-  <p>Our full stack curriculum is free and supported by a passionate open source community.</p>
-
-  <button>View Full Curriculum</button>
-
-  <div>hero</div>
-</header>
-*/
 /* MEDIA QUERIES */
 @media (min-width: 768px) {
   nav {
@@ -136,6 +165,20 @@ header img {
   }
   #menu ul {
     display: flex;
+  }
+
+  #how > p {
+    width: 600px;
+  }
+  #how ul {
+    max-width: 1110px;
+  }
+  #how li {
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+  #how li img {
+    height: 165px;
   }
 }
 @media (min-width: 1024px) {
