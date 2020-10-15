@@ -1,3 +1,7 @@
-
+@font-face {
+  font-family: Norse;
+  font-weight: bold;
+  src: url("norse.bold.otf") format("opentype");
+}
 
 /*# sourceMappingURL=main.css.map */
