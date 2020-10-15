@@ -9,13 +9,17 @@ body > * {
 
 /* NAV */
 nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 80px;
   padding: 0 20px;
   white-space: nowrap;
-  border-bottom: 1px solid #ddd;
+  background-color: #fff;
 }
 
 nav > * {
@@ -71,6 +75,55 @@ nav > * {
   border-top-color: #000;
 }
 
+/* HEADER */
+header {
+  margin-top: 150px;
+  text-align: center;
+  background: linear-gradient(to bottom, #fff, #eee);
+  line-height: 0;
+}
+header h1 {
+  margin-bottom: 30px;
+  font-size: 2.8em;
+  font-weight: 300;
+  line-height: 1.2;
+  color: #ce973e;
+}
+header p {
+  margin-bottom: 60px;
+  font-size: 1.4em;
+  line-height: 1.8;
+  color: rgba(74, 74, 74, 0.7);
+}
+header .btn {
+  margin-bottom: 60px;
+  display: inline-block;
+  padding: 1.8em 3.6em;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2em;
+  background-color: #6abfc3;
+  border-color: #6abfc3;
+  box-shadow: 0 0 0.5em #aaa;
+}
+header .btn:hover {
+  background-color: #8ecfd2;
+}
+header img {
+  width: 100%;
+}
+
+/*
+<header>
+  <h1>Your Career in Web Development Starts Here</h1>
+
+  <p>Our full stack curriculum is free and supported by a passionate open source community.</p>
+
+  <button>View Full Curriculum</button>
+
+  <div>hero</div>
+</header>
+*/
 /* MEDIA QUERIES */
 @media (min-width: 768px) {
   nav {
