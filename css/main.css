@@ -1,8 +1,10 @@
+/* IMPORTS AND VARIABLES */
 @font-face {
   font-family: Norse;
   font-weight: bold;
   src: url("norse.bold.otf") format("opentype");
 }
+/* GENERAL */
 body > * {
   font-family: "Open Sans", sans-serif;
 }
@@ -294,6 +296,26 @@ footer .links a:hover {
 }
 #social-media a:hover {
   color: #000;
+}
+
+/* COMMENTS */
+#comments a {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  height: 70px;
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  border-radius: 50%;
+  box-shadow: 0 0 0.5em #aaa;
+  color: #fff;
+  background-color: #6abfc3;
+}
+#comments a:hover {
+  box-shadow: 0 0 0.7em #888;
 }
 
 /* MEDIA QUERIES */
