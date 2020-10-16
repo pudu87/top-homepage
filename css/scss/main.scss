@@ -25,6 +25,20 @@ section {
   box-shadow: 0 0 .5em #aaa;
   border-radius: 5px;
 }
+.logo {
+  align-items: center;
+  font-family: Norse, sans-serif;
+  font-weight: bold;
+  color: $orange;
+  > a:last-child {
+    margin-left: .5em;
+    white-space: nowrap;
+    text-shadow: .02em .02em $orange;
+  }
+  img {
+    height: 60px;
+  }
+}
 h2 {
   font-weight: bold;
 }
@@ -48,21 +62,12 @@ nav {
   padding: 0 20px;
   white-space: nowrap;
   background-color: #fff;
-}
-nav > * {
+  > * {
   display: flex;
   align-items: center;
-}
-#logo {
-  img {
-    height: 60px;
   }
-  > a:last-child {
-    margin-left: .5em;
-    font-family: Norse, sans-serif;
-    font-weight: bold;
-    font-size: 25px;
-    color: $orange;
+  .logo > a:last-child {
+      font-size: 25px;
   }
 }
 #menu {
@@ -255,23 +260,47 @@ header {
   }
 }
 
-/*
-<section id="success-stories">
-  <h2>Success Stories</h2>
-  <ul>
-    <li>
-      <img src="images/rob-pando.jpg" alt="rob pando">
-      <div>
-        <h3><a href="#">Rob Pando</a></h3>
-        <p>TOP was a perfect match for my learning style. Not walking me through an entire project but actually forcing me to figure it out on my own, by pointing me...</p>
-      </div>
-    </li>
-    ...
-  </ul>
-  <a id="read-more" href="#">Read more succes stories</a>
-  <p>Start learning for free now!</p>
-  <a class="btn" href="#">Sign Up</a>
-</section>
+/* FOOTER */
+
+footer {
+  height: 140px;
+  align-items: center;
+  .logo {
+    display: none;
+    justify-content: center;
+    font-size: 20px;
+    > a:last-child {
+      margin-left: .5em;
+    }
+  }
+  ul {
+    margin-bottom: 0;
+  }
+  .links {
+    justify-items: center;
+    a {
+      font-size: 1.2em;
+      font-weight: bold;
+      line-height: 2;
+      white-space: nowrap;
+      color: $grey;
+    }
+    a:hover {
+      color: #000;
+    }
+  }
+}
+#social-media {
+  grid-gap: 5px;
+  text-align: center;
+  a {
+    font-size: 1.6em;
+    color: $orange;
+  }
+  a:hover {
+    color: #000;
+  }
+}
 
 /* MEDIA QUERIES */
 
@@ -285,6 +314,11 @@ header {
     img {
       height: 160px;
       margin-bottom: 1em;
+    }
+  }
+  #social-media {
+    a {
+      font-size: 2em;
     }
   }
 }
@@ -321,19 +355,26 @@ header {
       }
     }
   }
+  footer {
+    height: 250px;
+    .logo {
+      display: flex;
+    }
+  }
 }
 
 @media (min-width: 1024px) {
   nav {
     justify-content: space-between;
+    .logo > a:last-child {
+        font-size: 35px;
+    }
   }
-  #logo {
-    img {
-      height: 70px;
-    }
-    > a:last-child {
-      font-size: 35px;
-    }
+  .logo img {
+    height: 70px;
+  }
+  footer .logo > a:last-child {
+    font-size: 25px;
   }
 }
 
