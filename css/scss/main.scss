@@ -11,10 +11,14 @@ $grey:   rgba(74,74,74,0.7);
 body > * {
   font-family: 'Open Sans', sans-serif;
 }
+section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+}
 .btn {
-  margin-bottom: 60px;
   display: inline-block;
-  padding: 1.2em 2.5em;
+  padding: 1.2em 3em;
   color: #fff;
   font-weight: bold;
   font-size: 1.2em;
@@ -116,7 +120,7 @@ header {
     margin-bottom: 60px;
   }
   .btn {
-    @extend .btn;
+    margin-bottom: 50px;
     background-color: $teal;
     border-color: $teal;
   }
@@ -131,9 +135,6 @@ header {
 /* HOW */
 
 #how {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  text-align: center;
   > * {
     margin-right: auto;
     margin-left: auto;
@@ -161,8 +162,6 @@ header {
 /* COURSES */
 
 #courses {
-  padding-top: 80px;
-  text-align: center;
   background-color: #f3f3F3;
   h2 {
     margin-bottom: 40px;
@@ -201,6 +200,78 @@ header {
     background-color: lighten($orange, 10%);
   }
 }
+
+/* SUCCESS STORIES */
+
+#success-stories {
+  background: linear-gradient(to bottom, #fff, #eee);
+  > a {
+    display: inline-block;
+  }
+  h2 {
+    margin-bottom: 80px;
+  }
+  li {
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    text-align: left;
+    img {
+      height: 50px;
+      margin: 15px 25px;
+      border-radius: 50%;
+    }
+    div {
+      flex: 1;
+    }
+    h3 {
+      margin-bottom: 10px;
+      font-size: 1.5em;
+      color: $orange;
+    }
+    a:hover {
+      color: #000;
+    }
+  }
+  #read-more {
+    margin-bottom: 60px;
+    font-size: 1.2em;
+    text-decoration: underline;
+    color: $grey;
+  }
+  #read-more:hover {
+    color: #000;
+  }
+  > p {
+    margin-bottom: 35px;
+    font-size: 2.5em;
+    font-weight: 300;
+  }
+  .btn {
+    background-color: $teal;
+  }
+  .btn:hover {
+    background-color: lighten($teal, 10%);
+  }
+}
+
+/*
+<section id="success-stories">
+  <h2>Success Stories</h2>
+  <ul>
+    <li>
+      <img src="images/rob-pando.jpg" alt="rob pando">
+      <div>
+        <h3><a href="#">Rob Pando</a></h3>
+        <p>TOP was a perfect match for my learning style. Not walking me through an entire project but actually forcing me to figure it out on my own, by pointing me...</p>
+      </div>
+    </li>
+    ...
+  </ul>
+  <a id="read-more" href="#">Read more succes stories</a>
+  <p>Start learning for free now!</p>
+  <a class="btn" href="#">Sign Up</a>
+</section>
 
 /* MEDIA QUERIES */
 
@@ -262,6 +333,15 @@ header {
     }
     > a:last-child {
       font-size: 35px;
+    }
+  }
+}
+
+@media (min-width: 1185px) {
+  #success-stories {
+    ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
     }
   }
 }

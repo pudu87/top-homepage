@@ -7,10 +7,15 @@ body > * {
   font-family: "Open Sans", sans-serif;
 }
 
-.btn, header .btn {
-  margin-bottom: 60px;
+section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+.btn {
   display: inline-block;
-  padding: 1.2em 2.5em;
+  padding: 1.2em 3em;
   color: #fff;
   font-weight: bold;
   font-size: 1.2em;
@@ -114,6 +119,7 @@ header p {
   margin-bottom: 60px;
 }
 header .btn {
+  margin-bottom: 50px;
   background-color: #6abfc3;
   border-color: #6abfc3;
 }
@@ -125,11 +131,6 @@ header img {
 }
 
 /* HOW */
-#how {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  text-align: center;
-}
 #how > * {
   margin-right: auto;
   margin-left: auto;
@@ -155,8 +156,6 @@ header img {
 
 /* COURSES */
 #courses {
-  padding-top: 80px;
-  text-align: center;
   background-color: #f3f3F3;
 }
 #courses h2 {
@@ -195,6 +194,77 @@ header img {
 #courses .btn:hover {
   background-color: #d8ad67;
 }
+
+/* SUCCESS STORIES */
+#success-stories {
+  background: linear-gradient(to bottom, #fff, #eee);
+}
+#success-stories > a {
+  display: inline-block;
+}
+#success-stories h2 {
+  margin-bottom: 80px;
+}
+#success-stories li {
+  max-width: 600px;
+  margin: 20px auto;
+  display: flex;
+  text-align: left;
+}
+#success-stories li img {
+  height: 50px;
+  margin: 15px 25px;
+  border-radius: 50%;
+}
+#success-stories li div {
+  flex: 1;
+}
+#success-stories li h3 {
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  color: #ce973e;
+}
+#success-stories li a:hover {
+  color: #000;
+}
+#success-stories #read-more {
+  margin-bottom: 60px;
+  font-size: 1.2em;
+  text-decoration: underline;
+  color: rgba(74, 74, 74, 0.7);
+}
+#success-stories #read-more:hover {
+  color: #000;
+}
+#success-stories > p {
+  margin-bottom: 35px;
+  font-size: 2.5em;
+  font-weight: 300;
+}
+#success-stories .btn {
+  background-color: #6abfc3;
+}
+#success-stories .btn:hover {
+  background-color: #8ecfd2;
+}
+
+/*
+<section id="success-stories">
+  <h2>Success Stories</h2>
+  <ul>
+    <li>
+      <img src="images/rob-pando.jpg" alt="rob pando">
+      <div>
+        <h3><a href="#">Rob Pando</a></h3>
+        <p>TOP was a perfect match for my learning style. Not walking me through an entire project but actually forcing me to figure it out on my own, by pointing me...</p>
+      </div>
+    </li>
+    ...
+  </ul>
+  <a id="read-more" href="#">Read more succes stories</a>
+  <p>Start learning for free now!</p>
+  <a class="btn" href="#">Sign Up</a>
+</section>
 
 /* MEDIA QUERIES */
 @media (min-width: 560px) {
@@ -250,6 +320,12 @@ header img {
   }
   #logo > a:last-child {
     font-size: 35px;
+  }
+}
+@media (min-width: 1185px) {
+  #success-stories ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
